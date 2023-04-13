@@ -63,6 +63,17 @@ const TodoList = () => {
     );
   };
 
+  // `completed` 값이 `true`인 아이템들을 맨 뒤로 이동시키는 함수
+  const sortTodos = (a, b) => {
+    if (a.completed && !b.completed) {
+      return 1;
+    }
+    if (!a.completed && b.completed) {
+      return -1;
+    }
+    return 0;
+  };
+
   // 컴포넌트를 렌더링합니다.
   return (
     <div className={styles.container}>
@@ -80,7 +91,7 @@ const TodoList = () => {
       </button>
       {/* 할 일 목록을 렌더링합니다. */}
       <ul>
-        {todos.map((todo) => (
+        {[...todos].sort(sortTodos).map((todo) => (
           <TodoItem
             key={todo.id}
             todo={todo}
