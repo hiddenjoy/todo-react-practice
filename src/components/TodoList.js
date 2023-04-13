@@ -24,7 +24,17 @@ const TodoList = () => {
     //   completed: 완료 여부,
     // }
     // ...todos => {id: 1, text: "할일1", completed: false}, {id: 2, text: "할일2", completed: false}}, ..
-    setTodos([...todos, { id: Date.now(), text: input, completed: false }]);
+
+    setTodos([
+      ...todos,
+      {
+        id: Date.now(),
+        date: new Date(),
+        text: input,
+        completed: false,
+      },
+    ]);
+
     setInput("");
   };
 

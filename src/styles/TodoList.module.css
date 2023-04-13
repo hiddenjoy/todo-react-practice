@@ -15,16 +15,16 @@ input[type="text"].itemInput {
 
 button.addButton {
   padding: 5px;
-  background-color: #0070f3;
+  background-color: green;
   color: white;
-  border: 1px solid #0070f3;
+  border: 1px solid green;
   border-radius: 5px;
   cursor: pointer;
 }
 
 button.addButton:hover {
   background-color: #fff;
-  color: #0070f3;
+  color: green;
 }
 
 .todoItem {
@@ -36,4 +36,10 @@ button.addButton:hover {
 .todoText {
   margin-left: 10px;
   flex-grow: 1;
+}
+
+.todoDate {
+  margin-right: 10px;
+  font-size: 13px;
+  color: #999;
 }
